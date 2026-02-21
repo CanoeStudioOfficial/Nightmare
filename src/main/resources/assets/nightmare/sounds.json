@@ -1,0 +1,29 @@
+{
+  "phantomdies": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "deadguyshallucinationnightmare:eath2",
+        "stream": false
+      }
+    ]
+  },
+  "phantomhurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "deadguyshallucinationnightmare:urt3",
+        "stream": false
+      }
+    ]
+  },
+  "phantom": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "deadguyshallucinationnightmare:dle4",
+        "stream": false
+      }
+    ]
+  }
+}
