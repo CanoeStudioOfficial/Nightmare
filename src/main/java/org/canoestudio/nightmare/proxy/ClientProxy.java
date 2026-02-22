@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.obj.OBJLoader;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -18,6 +19,7 @@ public class ClientProxy implements IProxy {
     public void preInit(FMLPreInitializationEvent event) {
         OBJLoader.INSTANCE.addDomain("nightmare");
         registerEntityRenderers();
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     @Override
