@@ -102,7 +102,7 @@ public class EntityPhantom extends EntityMob {
         super.onDeath(cause);
         if (!this.world.isRemote) {
             if (this.rand.nextFloat() < 0.35f) {
-                this.entityDropItem(new ItemStack(ModItems.PHANTOM_FINS), 0.5f);
+                this.entityDropItem(new ItemStack(ModItems.PHANTOM_MEMBRANE), 0.5f);
             }
         }
     }

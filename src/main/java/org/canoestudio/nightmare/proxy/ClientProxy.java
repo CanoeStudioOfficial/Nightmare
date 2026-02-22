@@ -2,11 +2,16 @@ package org.canoestudio.nightmare.proxy;
 
 import org.canoestudio.nightmare.client.render.RenderPhantom;
 import org.canoestudio.nightmare.entity.EntityPhantom;
+import org.canoestudio.nightmare.init.ModItems;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ClientProxy implements IProxy {
     @Override
@@ -25,5 +30,10 @@ public class ClientProxy implements IProxy {
 
     private void registerEntityRenderers() {
         RenderingRegistry.registerEntityRenderingHandler(EntityPhantom.class, RenderPhantom::new);
+    }
+
+    @SubscribeEvent
+    public void registerModels(ModelRegistryEvent event) {
+        ModItems.registerModels(event);
     }
 }
