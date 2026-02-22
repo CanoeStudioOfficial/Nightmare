@@ -5,7 +5,6 @@ import org.canoestudio.nightmare.init.ModSounds;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAIAttackMelee;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
@@ -15,7 +14,6 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityFlyHelper;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathNavigateFlying;
@@ -51,9 +49,7 @@ public class EntityPhantom extends EntityMob {
         this.tasks.addTask(2, new EntityAILookIdle(this));
         this.tasks.addTask(3, new EntityAIPhantomAttack(this));
         this.targetTasks.addTask(4, new EntityAIHurtByTarget(this, true));
-        this.tasks.addTask(5, new EntityAIAttackMelee(this, 1.2, true));
-        this.targetTasks.addTask(6, new EntityAINearestAttackableTarget<>(this, EntityPlayer.class, true, true));
-        this.targetTasks.addTask(7, new EntityAINearestAttackableTarget<>(this, EntityPlayerMP.class, true, true));
+        this.targetTasks.addTask(5, new EntityAINearestAttackableTarget<>(this, EntityPlayer.class, true, true));
     }
 
     @Override

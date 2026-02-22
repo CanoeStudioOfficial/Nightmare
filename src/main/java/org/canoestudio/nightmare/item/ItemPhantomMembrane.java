@@ -4,12 +4,12 @@ import org.canoestudio.nightmare.NightmareMod;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class ItemPhantomFins extends Item {
-    public ItemPhantomFins() {
+public class ItemPhantomMembrane extends Item {
+    public ItemPhantomMembrane() {
         this.setMaxDamage(0);
         this.setMaxStackSize(64);
-        this.setTranslationKey(NightmareMod.MOD_ID + ".phantom_fins");
-        this.setRegistryName(NightmareMod.MOD_ID, "phantom_fins");
+        this.setTranslationKey(NightmareMod.MOD_ID + ".phantom_membrane");
+        this.setRegistryName(NightmareMod.MOD_ID, "phantom_membrane");
         this.setCreativeTab(CreativeTabs.MISC);
     }
 
